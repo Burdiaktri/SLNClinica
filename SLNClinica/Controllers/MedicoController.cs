@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SLNClinica.Data;
 using SLNClinica.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SLNClinica.Controllers
@@ -18,7 +19,7 @@ namespace SLNClinica.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var medicos = context.Medicos.ToList();
+            List<Medico> medicos =  context.Medicos.ToList();
             return View(medicos);
         }
 
