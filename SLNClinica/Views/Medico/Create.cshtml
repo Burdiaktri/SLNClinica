@@ -1,0 +1,38 @@
+﻿@model SLNClinica.Models.Medico
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h1>Registrar Nuevo Médico</h1>
+    @using (Html.BeginForm("Create", "Medico", FormMethod.Post))
+    {
+                <p>
+            @Html.LabelFor(model=>model.Nombre)
+            @Html.TextBoxFor(model=>model.Nombre)
+            @Html.ValidationMessageFor(model=>model.Nombre)
+                </p>
+                <p>
+            @Html.LabelFor(model=>model.Apellido)
+            @Html.TextBoxFor(model=>model.Apellido)
+            @Html.ValidationMessageFor(model=>model.Apellido)
+                </p>
+                <p>
+            @Html.LabelFor(model=>model.Matricula)
+            @Html.TextBoxFor(model=>model.Matricula)
+            @Html.ValidationMessageFor(model=>model.Matricula)
+                </p>
+
+                <input type="submit" action="Create" />
+
+        @Html.ActionLink("Volver a Index", "Index", "Medico")
+    }
+</body>
+</html>
