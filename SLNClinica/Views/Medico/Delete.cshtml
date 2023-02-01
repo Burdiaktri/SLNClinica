@@ -1,17 +1,10 @@
 ﻿@model SLNClinica.Models.Medico
 
 @{
-    Layout = null;
+    ViewData["Title"] = "DELETE medico";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-</head>
-<body>
         <h2>@Model.Nombre</h2>
     <p>Desea eliminar esta Medico?</p>
 
@@ -28,5 +21,3 @@
             <input type="submit" action="Delete"/>
         @Html.ActionLink("Volver", "Index", "Medico")
     }
-</body>
-</html>
